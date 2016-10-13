@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>IOT Project - Jeff Schreiner</title>
+	<link rel="icon" href="/Content/images/wifi.png">
+	<link rel="stylesheet" href="/Content/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/Content/css/site.css">
+</head>
+
+<body>
+
+
+	<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="/index.html">
+						<strong><span class="fa fa-wifi"></span> IOT</strong>
+					</a>
+				</li>
+				<li>
+					<a href="/thermo.html">
+                        Thermostat
+                    </a>
+				</li>
+				<li id="current-page">
+					<a href="/sec.html">
+                        Security
+                    </a>
+				</li>
+				<li>
+					<a href="/lights.html">
+                        Lights
+                    </a>
+				</li>
+				<li>
+					<a href="/program.html">
+                        Program
+                    </a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main>
+		<section class="alert-panel" id="closeWarning">
+			<div class="alert warning">Garage Door is in motion, wait 20 seconds before your next command.
+				<a href=""><span class="fa fa-close" /></a>
+			</div>
+		</section>
+		<section class="plans-panel">
+			<div>
+				<a href="newDevice.html"><span id="fab-new" class="fa fa-plus-circle"></span></a>
+				<img src="/Content/images/homeSec.png" alt="home blue prints" id="image">
+			</div>
+		</section>
+	</main>
+
+
+
+	<script>
+        document.getElementById('closeWarning').style.display = 'none';
+        
+		document.getElementById('image').addEventListener("click", plansPanelClick );
+
+		let status = "open";
+
+		function sleep(time) {
+			return new Promise((resolve) => setTimeout(resolve, time));
+		}
+
+		function plansPanelClick() {
+
+			document.getElementById('closeWarning').style.display = 'flex';
+
+			sleep(3000).then(() => {
+				document.getElementById('closeWarning').style.display = 'none';
+				if(status === "open"){
+					document.getElementById('image').src = "/Content/images/homeSec2.png";
+					status = "closed";				
+				} else if ( status === "closed") {
+					document.getElementById('image').src = "/Content/images/homeSec.png";
+					status = "closed";			
+				}	
+			});		
+		}
+
+    </script>
+</body>
+
+
+
+
+</html>

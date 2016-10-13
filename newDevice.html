@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>IOT Project - Jeff Schreiner</title>
+	<link rel="icon" href="/Content/images/wifi.png">
+	<link rel="stylesheet" href="/Content/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/Content/css/site.css">
+</head>
+
+<body>
+
+
+	<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="/index.html">
+						<strong><span class="fa fa-wifi"></span> IOT</strong>
+					</a>
+				</li>
+				<li>
+					<a href="/thermo.html">
+                        Thermostat
+                    </a>
+				</li>
+				<li id="current-page">
+					<a href="/sec.html">
+                        Security
+                    </a>
+				</li>
+				<li>
+					<a href="/lights.html">
+                        Lights
+                    </a>
+				</li>
+				<li>
+					<a href="/program.html">
+                        Program
+                    </a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main>
+
+		<section class="alert-panel" id="alert-panel">
+			<div class="alert okay">Found new device. A-Sense3001.
+				<a href=""><span class="fa fa-close" /></a>
+			</div>
+			<div class="alert okay">Found new device. A-Sense3001.
+				<a href=""><span class="fa fa-close" /></a>
+			</div>
+		</section>
+
+        <section class="steps-panel">
+            <div class="step" id="current-step">1. Name Devices</div>
+            <div class="step">2. Map Devices</div>
+        </section>
+
+        <section>
+            <form action="/newDevice2.html">
+                    
+                <div class="form-group">
+                    <label for="name1">
+                        Name your A-Sense3001:
+                        </label>
+                    <input type="text" id="name1" required autofocus>
+                    <input type="button" id="flash1" value="Identify" class="btn">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="name2">
+                        Name your A-Sense3001:
+                        </label>
+                    <input type="text" id="name2" required autofocus>
+                    <input type="button" id="flash2" value="Identify" class="btn">
+                </div>
+
+                <input type="submit" id="submit" value="Next" class="btn">
+            </form>
+        </section>
+	</main>
+
+
+
+	<script>
+
+		function sleep(time) {
+			return new Promise((resolve) => setTimeout(resolve, time));
+		}
+
+    </script>
+</body>
+
+
+
+
+</html>

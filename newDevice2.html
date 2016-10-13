@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>IOT Project - Jeff Schreiner</title>
+	<link rel="icon" href="/Content/images/wifi.png">
+	<link rel="stylesheet" href="/Content/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/Content/css/site.css">
+</head>
+
+<body>
+
+
+	<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="/index.html">
+						<strong><span class="fa fa-wifi"></span> IOT</strong>
+					</a>
+				</li>
+				<li>
+					<a href="/thermo.html">
+                        Thermostat
+                    </a>
+				</li>
+				<li id="current-page">
+					<a href="/sec.html">
+                        Security
+                    </a>
+				</li>
+				<li>
+					<a href="/lights.html">
+                        Lights
+                    </a>
+				</li>
+				<li>
+					<a href="/program.html">
+                        Program
+                    </a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main>
+
+		<section class="steps-panel">
+			<div class="step old-step">1. Name Devices</div>
+			<div class="step" id="current-step">2. Map Devices</div>
+		</section>
+
+		<section class="new-device-panel">
+			<p>Drag the dots to the device location.</p>
+			<div>
+				<div class="new-device">Left Front Window</div>
+				<div class="new-device">Right Front Window</div>
+			</div>
+		</section>
+
+		<section class="plans-panel">
+			<div>
+				<img src="/Content/images/homeNew.png" alt="home blue prints" id="image">
+			</div>
+		</section>
+
+			<form action="/index.html">
+				<input type="submit" class="btn" value="Done">
+			</form>
+
+	</main>
+
+
+
+	<script>
+
+		function sleep(time) {
+			return new Promise((resolve) => setTimeout(resolve, time));
+		}
+
+    </script>
+</body>
+
+
+
+
+</html>

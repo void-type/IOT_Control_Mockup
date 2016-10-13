@@ -1,0 +1,254 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    margin: 0;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+nav a:link, nav a:visited {
+    color: whitesmoke;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: block;
+    position: relative;
+    text-align: center;
+    min-width: 20%;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1em .5em;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: black;
+}
+
+nav ul li a:hover {
+    background-color: grey;
+}
+
+nav ul li ul {
+    display: none;
+    width: 100%;
+}
+
+nav ul li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+nav li:hover li a:hover {
+    background-color: grey;
+}
+
+nav ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+nav #current-page a {
+    color: cornflowerblue;
+}
+
+main {
+    margin: 0;
+    display: block;
+    background-color: whitesmoke;
+}
+
+.alert-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 1em 1em 2em;
+    background-color: #e3e3e3;
+    border-bottom: 2px solid darkgrey;
+}
+
+.alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5em 10%;
+    border-radius: .5em;
+    padding: 1em 2em;
+    width: 60%;   
+}
+
+.alert span.fa-close {
+    margin-left: .25em;
+}
+
+.macro-panel {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em;
+}
+
+.macro {
+    min-width: 8em;
+    max-width: 8em;
+    max-height: 8em;
+    padding: 3.5em .5em;
+    text-align: center;
+    word-wrap: normal;
+}
+
+.macro, alert {
+    border-radius: .5em;
+    border: 2px solid black;
+}
+
+.macro.warning:hover {
+    background-color: crimson;
+    border: 2px solid darkred;
+    color: white;
+}
+
+.macro.okay:hover {
+    background-color: blue;
+    border: 2px solid mediumblue;
+    color: white;
+}
+
+.okay {
+    background-color: lightblue;
+    border: 2px solid cornflowerblue; 
+}
+
+.warning {
+    background-color: lightcoral;
+    border: 2px solid indianred;
+}
+
+.plans-panel {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em 0;
+    width: 100%;
+}
+
+.plans-panel div {
+    border: 2px solid black;
+    position: relative;
+    width: 70%;
+}
+
+.plans-panel div img {
+    height: auto;
+    width: 100%;
+}
+
+#fab-new {
+    position: absolute;
+    top: 0;
+    right: -1em;
+    z-index: 100;
+    font-size: 3em;
+    color: mediumseagreen;
+}
+
+.btn {
+    margin-bottom: 1em;
+    padding: .5em;
+    border: 2px solid grey;
+    background-color: lightblue;
+    color: black;
+    font-weight: bold;
+    min-width: 6em;
+}
+
+input {
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+
+input[type="text"] {
+    padding: .5em;
+}
+
+label {
+    padding-top: .2em;
+    float: left;
+    width: 14em;
+    text-align: right;
+    margin-right: .5em;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input[type="submit"] {
+    margin-left: 37em;
+    background-color: mediumseagreen;
+}
+
+input::invalid {
+    outline: 2px solid red;
+}
+
+form {
+    margin: 1em;
+}
+
+.steps-panel {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid darkgrey;
+}
+
+
+.step {
+    border-right: 2px solid darkgray;
+    border-left: 2px solid darkgray;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+}
+
+.old-step {
+    background-color: lightgrey;
+}
+
+#current-step {
+    background-color: mediumseagreen;
+}
+
+.new-device-panel {
+    text-align: center;
+}
+
+.new-device-panel > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.new-device {
+    height: 5em;
+    border: 2px solid darkgrey;
+    padding: 1em;
+}
